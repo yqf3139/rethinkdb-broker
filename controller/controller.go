@@ -67,7 +67,7 @@ func (c *rethinkdbController) RemoveServiceInstance(id string) (*brokerapi.Delet
 }
 
 func (c *rethinkdbController) Bind(instanceID, bindingID string, req *brokerapi.BindingRequest) (*brokerapi.CreateServiceBindingResponse, error) {
-	host := releaseName(instanceID) + "-rethinkdb." + instanceID + ".svc.cluster.local"
+	host := releaseName(instanceID) + "-rethinkdb-proxy." + instanceID + ".svc.cluster.local"
 	password, err := client.GetPassword(releaseName(instanceID), instanceID)
 	if err != nil {
 		return nil, err
