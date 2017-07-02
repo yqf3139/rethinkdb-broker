@@ -1,0 +1,6 @@
+apiVersion: servicecatalog.k8s.io/v1alpha1
+kind: Broker
+metadata:
+  name: rethinkdb-broker
+spec:
+  url: http://rethinkdb-broker-rethinkdb-broker.rethinkdb-broker.svc.cluster.local
